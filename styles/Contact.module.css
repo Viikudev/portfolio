@@ -1,0 +1,52 @@
+.contact {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #271c42;
+  border: 0;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 100ms ease-in;
+  cursor: pointer;
+}
+
+.contact:hover {
+  background-color: #34294f;
+}
+
+.socialTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user {
+  line-height: 1.2;
+  white-space: pre-line;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact:hover .actionImg {
+  transform: translate(0, -0.25rem);
+  fill: #e61976;
+}
+
+.actionImg {
+  fill: #988db3;
+  width: 1.5rem;
+  transition: 100ms ease-in;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.bright {
+  color: #ded1ff;
+}

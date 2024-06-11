@@ -1,0 +1,31 @@
+.educationCard {
+  padding-left: 4rem;
+}
+
+.title {
+  font-size: 1.125rem;
+  color: #ded1ff;
+}
+
+.degree {
+  font-weight: 400;
+  color: #988db3;
+}
+
+.noMargin {
+  margin: 0;
+}
+
+@media screen and (width <= 1200px) and (width > 800px) {
+  .educationCard {
+    padding-inline: 0;
+    margin-left: 0;
+  }
+}
+
+@media screen and (width <= 800px) {
+  .educationCard {
+    padding-inline: 0;
+    margin-left: 0;
+  }
+}
