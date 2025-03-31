@@ -26,7 +26,7 @@ html,
 body {
   scroll-behavior: smooth;
   scrollbar-color: #e61976 #ded1ff;
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   line-height: 2;
   color: #988db3;
   background-color: #271c42;
