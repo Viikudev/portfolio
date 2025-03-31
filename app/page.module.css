@@ -115,7 +115,7 @@
   text-decoration: none;
   color: #ded1ff;
   font-weight: bold;
-  border-bottom: 2px solid #ded1ff;
+  /* border-bottom: 2px solid #ded1ff; */
   transition: 100ms ease-in;
 }
 

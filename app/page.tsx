@@ -62,7 +62,7 @@ export default function Home() {
             <h1 className={styles.author}>Victor Samuel</h1>
             <h3 className={styles.position}>Frontend Developer</h3>
             <p className={styles.introduction}>
-              <span className={styles.bright}>Hello there! {`I'm`} Victor</span>
+              Hello there! <span className={styles.bright}>{`I'm`} Victor</span>
               , a passionate{" "}
               <span className={styles.bright}>frontend developer</span> who
               creates <span className={styles.bright}>beautiful</span> and{" "}
