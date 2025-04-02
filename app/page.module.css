@@ -1,3 +1,46 @@
+.languageContainer input[type="radio"] {
+  display: none;
+}
+
+.languageContainer input:checked + label {
+  background-color: #e61976;
+}
+
+.languageContainer {
+  position: fixed;
+  right: 1rem;
+  top: 3rem;
+  z-index: 1000;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.languageOptions {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: end;
+}
+
+.englishOption {
+  border: 1px solid #ded1ff;
+  border-radius: 1rem 0 0 1rem;
+  padding: 0.25rem;
+}
+
+.spanishOption {
+  border: 1px solid #ded1ff;
+  border-radius: 0 1rem 1rem 0;
+  padding: 0.25rem;
+}
+
+.englishOption,
+.spanishOption {
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .main {
   display: flex;
   justify-content: center;

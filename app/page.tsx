@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "@/app/page.module.css";
 import imgGithubUrl from "@/public/github.svg";
 import imgLinkedinUrl from "@/public/linkedin.svg";
+import imgSpain from "@/public/spain.png";
+import imgUnitedStates from "@/public/united-states.png";
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import Skill from "@/components/Skill";
@@ -11,13 +13,62 @@ import Contact from "@/components/Contact";
 import ExperienceCard from "@/components/ExperienceCard";
 import EducationCard from "@/components/EducationCard";
 
+import { translations } from "@/lib/translations";
+import { useState } from "react";
+
+type LocaleProps = "en" | "es";
+
 export default function Home() {
+  const [language, setLanguage] = useState<LocaleProps>("en");
+
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newLanguage = event.target.value as LocaleProps;
+    setLanguage(newLanguage);
+  };
+
   const handleClick = () => {
     const email = "victoress18@gmail.com";
     navigator.clipboard.writeText(email);
   };
+
   return (
     <>
+      <div className={[styles.languageContainer, styles.bright].join(" ")}>
+        {language === "es" ? (
+          <Image src={imgSpain} alt="Spain Flag" width={40} height={40} />
+        ) : (
+          <Image
+            src={imgUnitedStates}
+            alt="United States Flag"
+            width={40}
+            height={40}
+          />
+        )}
+        <div className={styles.languageOptions}>
+          <input
+            type="radio"
+            name="language"
+            value="en"
+            id="en"
+            onChange={handleLanguageChange}
+            checked={language === "en"}
+          />
+          <label className={styles.englishOption} htmlFor="en">
+            English
+          </label>
+          <input
+            type="radio"
+            name="language"
+            value="es"
+            id="es"
+            onChange={handleLanguageChange}
+            checked={language === "es"}
+          />
+          <label className={styles.spanishOption} htmlFor="es">
+            Español
+          </label>
+        </div>
+      </div>
       <main className={styles.main}>
         <section className={styles.left}>
           {/* HERO DESKTOP */}
@@ -60,47 +111,59 @@ export default function Home() {
           </div>
           <div className={styles.info}>
             <h1 className={styles.author}>Victor Samuel</h1>
-            <h3 className={styles.position}>Frontend Developer</h3>
-            <p className={styles.introduction}>
-              Hello there! <span className={styles.bright}>{`I'm`} Victor</span>
-              , a passionate{" "}
-              <span className={styles.bright}>frontend developer</span> who
-              creates <span className={styles.bright}>beautiful</span> and{" "}
-              <span className={styles.bright}>interactive</span> user interfaces
-              for the comfort of the clients.
-            </p>
+            <h3 className={styles.position}>{translations[language].role}</h3>
+            {language === "es" ? (
+              <p className={styles.introduction}>
+                Hola! Soy <span className={styles.bright}>Victor</span>, un{" "}
+                <span className={styles.bright}>desarrollador frontend</span>{" "}
+                apasionado que crea interfaces de usuario{" "}
+                <span className={styles.bright}>hermosas</span> e{" "}
+                <span className={styles.bright}>interactivas</span> para la
+                comodidad de los clientes.
+              </p>
+            ) : (
+              <p className={styles.introduction}>
+                Hello there!{" "}
+                <span className={styles.bright}>{`I'm`} Victor</span>, a
+                passionate{" "}
+                <span className={styles.bright}>frontend developer</span> who
+                creates <span className={styles.bright}>beautiful</span> and{" "}
+                <span className={styles.bright}>interactive</span> user
+                interfaces for the comfort of the clients.
+              </p>
+            )}
           </div>
 
           <nav>
             <ul className={styles.sectionList}>
               <li>
                 <a className={styles.link} href="#about">
-                  About
+                  {translations[language].nav.about}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#projects">
-                  Projects
+                  {translations[language].nav.projects}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#experience">
-                  Experience
+                  {translations[language].nav.experience}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#skills">
-                  Skills
+                  {translations[language].nav.skills}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#education">
-                  Education
+                  {translations[language].nav.education}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#contact">
-                  Contact
+                  {translations[language].nav.contact}
                 </a>
               </li>
             </ul>
@@ -111,32 +174,32 @@ export default function Home() {
             <ul className={styles.sectionListTablet}>
               <li>
                 <a className={styles.link} href="#about">
-                  About
+                  {translations[language].nav.about}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#projects">
-                  Projects
+                  {translations[language].nav.projects}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#experience">
-                  Experience
+                  {translations[language].nav.experience}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#skills">
-                  Skills
+                  {translations[language].nav.skills}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#education">
-                  Education
+                  {translations[language].nav.education}
                 </a>
               </li>
               <li>
                 <a className={styles.link} href="#contact">
-                  Contact
+                  {translations[language].nav.contact}
                 </a>
               </li>
             </ul>
@@ -152,7 +215,7 @@ export default function Home() {
             />
             <div className={styles.infoTablet}>
               <h1 className={styles.author}>Victor Samuel</h1>
-              <h3 className={styles.position}>Frontend Developer</h3>
+              <h3 className={styles.position}>{translations[language].role}</h3>
               <p className={styles.introduction}>
                 <span className={styles.bright}>
                   Hello there! {`I'm`} Victor
@@ -194,77 +257,105 @@ export default function Home() {
           </div>
 
           <footer className={styles.footer}>
-            <p className={styles.details}>
-              Designed by me with <span className={styles.bright}>Miro</span>,
-              used <span className={styles.bright}>Next.js</span> framework in
-              the development, styled using{" "}
-              <span className={styles.bright}>CSS Modules</span> and deployed in{" "}
-              <span className={styles.bright}>Vercel</span>. Took inspiration
-              from{" "}
-              <span className={styles.brittany}>{`Brittany
+            {language === "es" ? (
+              <p className={styles.details}>
+                Diseñado por mí con <span className={styles.bright}>Miro</span>,
+                utilice el framework{" "}
+                <span className={styles.bright}>Next.js</span> en el desarrollo,
+                aplique estilos usando{" "}
+                <span className={styles.bright}>CSS Modules</span> y lo
+                desplegue en <span className={styles.bright}>Vercel</span>. Tomé
+                inspiración del portafolio de{" "}
+                <span className={styles.brittany}>{`Brittany
           Chiang's `}</span>{" "}
-              portfolio.
-            </p>
+                portfolio.
+              </p>
+            ) : (
+              <p className={styles.details}>
+                Designed by me with <span className={styles.bright}>Miro</span>,
+                used <span className={styles.bright}>Next.js</span> framework in
+                the development, styled using{" "}
+                <span className={styles.bright}>CSS Modules</span> and deployed
+                in <span className={styles.bright}>Vercel</span>. Took
+                inspiration from{" "}
+                <span className={styles.brittany}>{`Brittany
+          Chiang's `}</span>{" "}
+                portfolio.
+              </p>
+            )}
           </footer>
         </section>
         <section className={styles.right}>
-          <Section title="About" id="about">
-            <p
-              className={styles.description}
-            >{`From childhood to the present day, I have always been passionate about video games. This led me to be constantly close to technology and its workings. 
-            
-            I witnessed firsthand how technology evolved, and with it, my interest in it grew. When I first interacted with code in college, it didn't capture my attention much. I thought the tasks I was doing weren't that great and didn't have interesting visibility. However, everything changed when I started learning about HTML, CSS, and JavaScript languages. I could create beautiful results with the code I wrote. Since then, I have dedicated myself to writing code to create beautiful and user-friendly interfaces to contribute to the applications that users utilize.`}</p>
+          <Section title={translations[language].about.title} id="about">
+            <p className={styles.description}>
+              {translations[language].about.content}
+            </p>
           </Section>
-          <Section title="Projects" id="projects">
+          <Section title={translations[language].projects.title} id="projects">
             <ul className={styles.projectList}>
               <ProjectCard
                 project="scramblle.png"
-                title="Guess the word Game"
-                duration="March 2024 - April 2024"
-                description="This game shows an unordered word and the player should
-                    enter the letters in the correct order to win the game. This
-                    game tests the Logical knowledge to build a game from
-                    scratch"
+                title={
+                  translations[language].projects.guessTheWordGame.projectTitle
+                }
+                duration={
+                  translations[language].projects.guessTheWordGame.projectDate
+                }
+                description={
+                  translations[language].projects.guessTheWordGame
+                    .projectDescription
+                }
                 tags={["HTML", "CSS", "Javascript", "Vite"]}
                 url="https://victoresamuel.github.io/Guess-the-word-game/"
               />
               <ProjectCard
                 project="coffee.png"
-                title="Coffee Listing"
-                duration="May 2024 - May 2024"
-                description="A project created using HTML, CSS, Typescript and ReactJS.
-                    It used an API to get the data of coffee items, and built a
-                    reusable component that shows every type of coffe in the
-                    list with their own properties. The project uses the state
-                    management to show the entire list of coffees or only the
-                    coffees that are available."
+                title={
+                  translations[language].projects.coffeeListing.projectTitle
+                }
+                duration={
+                  translations[language].projects.coffeeListing.projectDate
+                }
+                description={
+                  translations[language].projects.coffeeListing
+                    .projectDescription
+                }
                 tags={["HTML", "CSS", "Typescript", "React", "Vite"]}
                 url="https://victoresamuel.github.io/Coffee-Listing/"
               />
             </ul>
           </Section>
-          <Section title="Experience" id="experience">
+          <Section
+            title={translations[language].experience.title}
+            id="experience"
+          >
             <ul className={styles.experienceList}>
               <ExperienceCard
                 experience="ferrominera.jpg"
-                title="Intern"
-                company="CVG Ferrominera Orinoco C.A. | Full-time"
-                duration="June 2023 - September 2023"
-                location="Puerto Ordaz, Bolivar State, Venezuela | On-site"
-                description="Using tools like Python, SQLite y Tkinter; I built a desktop
-                  application with the capacity to migrate data from .txt files
-                  to a database, then the user can create tables with the
-                  required data retrieved from the database. Using libraries
-                  like Matplotlib and numpy, the application has the feature to
-                  create graphics according to the data that the users need.
-                  This application improved the performance of the operations
-                  room workers around a 23% when they are doing tasks related
-                  with users data."
-                tags={["Python", "SQLite", "Tkinter", "VMware", "Matplotlib"]}
+                title={
+                  translations[language].experience.ferrominera.ferromineraRole
+                }
+                company={
+                  translations[language].experience.ferrominera
+                    .ferromineraCompany
+                }
+                duration={
+                  translations[language].experience.ferrominera.ferromineraDate
+                }
+                location={
+                  translations[language].experience.ferrominera
+                    .ferromineraLocation
+                }
+                description={
+                  translations[language].experience.ferrominera
+                    .ferromineraDescription
+                }
+                tags={["HTML", "CSS", "Typescript", "React", "Vite"]}
               />
             </ul>
           </Section>
-          <Section title="Skills" id="skills">
+
+          <Section title={translations[language].skills.title} id="skills">
             <ul className={styles.skillList}>
               <Skill skill="html" name="HTML" />
               <Skill skill="css" name="CSS" />
@@ -273,14 +364,20 @@ export default function Home() {
               <Skill skill="react" name="React.js" />
             </ul>
           </Section>
-          <Section title="Education" id="education">
+          <Section
+            title={translations[language].education.title}
+            id="education"
+          >
             <EducationCard
-              university="Gran Mariscal de Ayacucho Northeast University"
-              degree="Engineer's Degree, Systems Engineering"
-              duration="February 2019 - June 2024"
+              university={translations[language].education.university}
+              degree={translations[language].education.degree}
+              duration={translations[language].education.date}
             />
           </Section>
-          <Section title="Let's Make Something Awesome!" id="contact">
+          <Section
+            title={translations[language].callToAction.title}
+            id="contact"
+          >
             <ul className={styles.contactList}>
               <div className={styles.socialsContainer}>
                 <Contact
@@ -312,16 +409,27 @@ export default function Home() {
         </section>
       </main>
       <footer className={styles.footerTablet}>
-        <p className={styles.details}>
-          Designed by me with <span className={styles.bright}>Miro</span>, used{" "}
-          <span className={styles.bright}>Next.js</span> framework in the
-          development, styled using{" "}
-          <span className={styles.bright}>CSS Modules</span> and deployed in{" "}
-          <span className={styles.bright}>Vercel</span>. Took inspiration from{" "}
-          <span className={styles.brittany}>{`Brittany
-          Chiang's `}</span>{" "}
-          portfolio.
-        </p>
+        {language === "es" ? (
+          <p className={styles.details}>
+            Diseñado por mí con <span className={styles.bright}>Miro</span>,
+            utilice el framework <span className={styles.bright}>Next.js</span>{" "}
+            en el desarrollo, aplique estilos usando{" "}
+            <span className={styles.bright}>CSS Modules</span> y lo desplegue en{" "}
+            <span className={styles.bright}>Vercel</span>. Tomé inspiración del
+            portafolio de{" "}
+            <span className={styles.brittany}>{`Brittany Chiang's `}</span>
+          </p>
+        ) : (
+          <p className={styles.details}>
+            Designed by me with <span className={styles.bright}>Miro</span>,
+            used <span className={styles.bright}>Next.js</span> framework in the
+            development, styled using{" "}
+            <span className={styles.bright}>CSS Modules</span> and deployed in{" "}
+            <span className={styles.bright}>Vercel</span>. Took inspiration from{" "}
+            <span className={styles.brittany}>{`Brittany Chiang's `}</span>
+            portfolio.
+          </p>
+        )}
       </footer>
     </>
   );
