@@ -70,7 +70,7 @@ export const translations = {
       contact: "Contacto",
     },
     about: {
-      title: "Acerca de",
+      title: "Sobre Mi",
       content:
         "Desde la infancia hasta el día de hoy, siempre he sido un apasionado de los videojuegos. Esto me llevó a estar constantemente cerca de la tecnología y su funcionamiento.\n\nPresencié de primera mano cómo evolucionaba la tecnología y, con ella, crecía mi interés por ella. Cuando interactué por primera vez con el código en la universidad, no captó mucho mi atención. Pensé que las tareas que estaba haciendo no eran tan buenas y no tenían una visibilidad interesante. Sin embargo, todo cambió cuando comencé a aprender sobre los lenguajes HTML, CSS y JavaScript. Podía crear paginas llamativas e interesantes con el código que escribía. Desde entonces, me he dedicado a escribir código para crear interfaces hermosas y fáciles de usar para contribuir a las aplicaciones que utilizan los usuarios.",
     },
