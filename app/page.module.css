@@ -13,14 +13,14 @@
   z-index: 1000;
   margin-bottom: 1rem;
   display: flex;
-  justify-content: end;
+  flex: end;
   gap: 1rem;
 }
 
 .languageOptions {
   margin-bottom: 1rem;
   display: flex;
-  justify-content: end;
+  flex: end;
 }
 
 .englishOption {

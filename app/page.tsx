@@ -216,30 +216,26 @@ export default function Home() {
             <div className={styles.infoTablet}>
               <h1 className={styles.author}>Victor Samuel</h1>
               <h3 className={styles.position}>{translations[language].role}</h3>
-              <p className={styles.introduction}>
-                {language === "es" ? (
-                  <p className={styles.introduction}>
-                    Hola! Soy <span className={styles.bright}>Victor</span>, un{" "}
-                    <span className={styles.bright}>
-                      desarrollador frontend
-                    </span>{" "}
-                    apasionado que crea interfaces de usuario{" "}
-                    <span className={styles.bright}>hermosas</span> e{" "}
-                    <span className={styles.bright}>interactivas</span> para la
-                    comodidad de los clientes.
-                  </p>
-                ) : (
-                  <p className={styles.introduction}>
-                    Hello there!{" "}
-                    <span className={styles.bright}>{`I'm`} Victor</span>, a
-                    passionate{" "}
-                    <span className={styles.bright}>frontend developer</span>{" "}
-                    who creates <span className={styles.bright}>beautiful</span>{" "}
-                    and <span className={styles.bright}>interactive</span> user
-                    interfaces for the comfort of the clients.
-                  </p>
-                )}
-              </p>
+              {language === "es" ? (
+                <p className={styles.introduction}>
+                  Hola! Soy <span className={styles.bright}>Victor</span>, un{" "}
+                  <span className={styles.bright}>desarrollador frontend</span>{" "}
+                  apasionado que crea interfaces de usuario{" "}
+                  <span className={styles.bright}>hermosas</span> e{" "}
+                  <span className={styles.bright}>interactivas</span> para la
+                  comodidad de los clientes.
+                </p>
+              ) : (
+                <p className={styles.introduction}>
+                  Hello there!{" "}
+                  <span className={styles.bright}>{`I'm`} Victor</span>, a
+                  passionate{" "}
+                  <span className={styles.bright}>frontend developer</span> who
+                  creates <span className={styles.bright}>beautiful</span> and{" "}
+                  <span className={styles.bright}>interactive</span> user
+                  interfaces for the comfort of the clients.
+                </p>
+              )}
             </div>
           </div>
           <div className={styles.socialsTablet}>
