@@ -1,7 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import styles from '@/styles/ProjectCard.module.css'
-import Tag from './Tag'
+import React from "react"
+import Image from "next/image"
+import styles from "@/styles/ProjectCard.module.css"
+import Tag from "./Tag"
 
 type Props = {
   project: string
@@ -32,7 +32,7 @@ function ProjectCard({
         />
         <div className={styles.info}>
           <div className={styles.titleContainer}>
-            <h4 className={[styles.noMargin, styles.title].join(' ')}>
+            <h4 className={[styles.noMargin, styles.title].join(" ")}>
               {title}
             </h4>
             <svg

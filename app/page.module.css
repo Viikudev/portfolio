@@ -8,8 +8,8 @@
 
 .languageContainer {
   position: fixed;
-  right: 1rem;
-  top: 3rem;
+  right: 5rem;
+  top: 1rem;
   z-index: 1000;
   margin-bottom: 1rem;
   display: flex;
@@ -25,18 +25,20 @@
 
 .englishOption {
   border: 1px solid #ded1ff;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 0.5rem 0 0 0.5rem;
   padding: 0.25rem;
 }
 
 .spanishOption {
   border: 1px solid #ded1ff;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 0.5rem 0.5rem 0;
   padding: 0.25rem;
 }
 
 .englishOption,
 .spanishOption {
+  padding-inline: 0.675rem;
+  font-size: small;
   font-weight: bold;
   cursor: pointer;
 }
@@ -65,7 +67,7 @@
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .hero {
@@ -111,12 +113,10 @@
 
 .githubContainer:hover {
   filter: brightness(1.5);
-  box-shadow: 0 0 20px 2px #ded1ff;
 }
 
 .linkedinContainer:hover {
   filter: brightness(1.5);
-  box-shadow: 0 0 20px 2px #0077b5;
 }
 
 .github,
@@ -134,6 +134,10 @@
   color: #ded1ff;
   margin: 0;
   font-weight: bold;
+}
+
+.position {
+  color: #988db3;
 }
 
 .introduction {
@@ -178,7 +182,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .skillList {
@@ -290,7 +294,7 @@
   }
 
   .heroTablet {
-    margin: 2rem 0;
+    margin: 2rem 0 0 0;
     display: flex;
     gap: 1rem;
   }

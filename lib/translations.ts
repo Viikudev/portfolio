@@ -14,7 +14,7 @@ export const translations = {
     about: {
       title: "About",
       content:
-        "From childhood to the present day, I have always been passionate about video games. This led me to be constantly close to technology and its workings.\n\nI witnessed firsthand how technology evolved, and with it, my interest in it grew. When I first interacted with code in college, it didn't capture my attention much. I thought the tasks I was doing weren't that great and didn't have interesting visibility. However, everything changed when I started learning about HTML, CSS, and JavaScript languages. I could create beautiful results with the code I wrote. Since then, I have dedicated myself to writing code to create beautiful and user-friendly interfaces to contribute to the applications that users utilize.",
+        "From childhood to the present day, I have always been passionate about video games. This led me to be constantly close to technology and its workings.\n\nI witnessed firsthand how technology evolved, and with it, my interest in it grew.When I first interacted with code in college, it didn't capture my attention much. I thought the tasks I was doing weren't that great and didn't have interesting visibility. However, everything changed when I started learning about HTML, CSS, and JavaScript languages.\n\nI could create beautiful results with the code I wrote. Since then, I have dedicated myself to writing code to create beautiful and user-friendly interfaces to contribute to the applications that users utilize.",
     },
     projects: {
       title: "Projects",
@@ -72,7 +72,7 @@ export const translations = {
     about: {
       title: "Sobre Mi",
       content:
-        "Desde la infancia hasta el día de hoy, siempre he sido un apasionado de los videojuegos. Esto me llevó a estar constantemente cerca de la tecnología y su funcionamiento.\n\nPresencié de primera mano cómo evolucionaba la tecnología y, con ella, crecía mi interés por ella. Cuando interactué por primera vez con el código en la universidad, no captó mucho mi atención. Pensé que las tareas que estaba haciendo no eran tan buenas y no tenían una visibilidad interesante. Sin embargo, todo cambió cuando comencé a aprender sobre los lenguajes HTML, CSS y JavaScript. Podía crear paginas llamativas e interesantes con el código que escribía. Desde entonces, me he dedicado a escribir código para crear interfaces hermosas y fáciles de usar para contribuir a las aplicaciones que utilizan los usuarios.",
+        "Desde la infancia hasta el día de hoy, siempre he sido un apasionado de los videojuegos. Esto me llevó a estar constantemente cerca de la tecnología y su funcionamiento.\n\nPresencié de primera mano cómo evolucionaba la tecnología y, con ella, crecía mi interés por ella. Cuando interactué por primera vez con el código en la universidad, no captó mucho mi atención. Pensé que las tareas que estaba haciendo no eran tan buenas y no tenían una visibilidad interesante. Sin embargo, todo cambió cuando comencé a aprender sobre los lenguajes HTML, CSS y JavaScript.\n\nPodía crear paginas llamativas e interesantes con el código que escribía. Desde entonces, me he dedicado a escribir código para crear interfaces hermosas y fáciles de usar para contribuir a las aplicaciones que utilizan los usuarios.",
     },
     projects: {
       title: "Proyectos",
@@ -116,4 +116,4 @@ export const translations = {
     footer:
       "Diseñado por mí con Miro, utilicé el framework Next.js en el desarrollo, estilizado con CSS Modules y desplegado en Vercel. Me inspiré en el portafolio de Brittany Chiang.",
   },
-};
+}
