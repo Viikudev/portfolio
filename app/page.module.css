@@ -3,7 +3,8 @@
 }
 
 .languageContainer input:checked + label {
-  background-color: #e61976;
+  background-color: white;
+  color: #001427;
 }
 
 .languageContainer {
@@ -24,13 +25,13 @@
 }
 
 .englishOption {
-  border: 1px solid #ded1ff;
+  border: 1px solid white;
   border-radius: 0.5rem 0 0 0.5rem;
   padding: 0.25rem;
 }
 
 .spanishOption {
-  border: 1px solid #ded1ff;
+  border: 1px solid white;
   border-radius: 0 0.5rem 0.5rem 0;
   padding: 0.25rem;
 }
@@ -41,6 +42,10 @@
   font-size: small;
   font-weight: bold;
   cursor: pointer;
+}
+
+.selectedLang {
+  color: #001427;
 }
 
 .main {
@@ -131,17 +136,17 @@
 
 .author,
 .position {
-  color: #ded1ff;
+  color: #f9db6d;
   margin: 0;
   font-weight: bold;
 }
 
 .position {
-  color: #988db3;
+  color: #fff7f8;
 }
 
 .introduction {
-  color: #988db3;
+  color: #fff7f8;
   width: 20rem;
 }
 
@@ -160,7 +165,7 @@
 .link {
   padding-inline: 0.125rem;
   text-decoration: none;
-  color: #ded1ff;
+  color: #fff7f8;
   font-weight: bold;
   /* border-bottom: 2px solid #ded1ff; */
   transition: 100ms ease-in;
@@ -168,8 +173,8 @@
 
 .link:hover {
   margin-inline: 0.5rem;
-  border-bottom: 2px solid #e61976;
-  color: #e61976;
+  border-bottom: 2px solid #f9db6d;
+  color: #f9db6d;
 }
 
 .description {
@@ -235,7 +240,7 @@
 }
 
 .bright {
-  color: #ded1ff;
+  color: #fff7f8;
 }
 
 .brittany {

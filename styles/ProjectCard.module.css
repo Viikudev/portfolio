@@ -1,5 +1,5 @@
 .projectCard {
-  color: #988db3;
+  color: #fff7f8;
   text-decoration: none;
   margin-left: 2.5rem;
   padding: 1rem;
@@ -11,7 +11,7 @@
 
 .projectCard:hover {
   border-radius: 0.5rem;
-  background-color: #34294f;
+  background-color: #708d8119;
 }
 
 .info {
@@ -22,7 +22,7 @@
 
 .projectCard:hover .linkImg {
   transform: translate(0, -0.25rem);
-  fill: #e61976;
+  fill: #f4d58d;
 }
 
 .titleContainer {
@@ -34,11 +34,11 @@
 .title {
   font-size: 1.125rem;
   height: fit-content;
-  color: #ded1ff;
+  color: #fff7f8;
 }
 
 .linkImg {
-  fill: #988db3;
+  fill: #faf0e6;
   width: 1.5rem;
   transition: 100ms ease-in;
 }
@@ -50,7 +50,6 @@
 }
 
 .img {
-  box-shadow: 0.375rem 0.375rem 1rem #25041385;
   border-radius: 0.5rem;
   width: 40%;
   height: 40%;

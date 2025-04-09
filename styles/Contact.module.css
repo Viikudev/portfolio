@@ -1,7 +1,6 @@
 .contact {
   padding: 0.5rem;
   border-radius: 0.5rem;
-  background-color: #271c42;
   border: 0;
   width: fit-content;
   display: flex;
@@ -12,7 +11,7 @@
 }
 
 .contact:hover {
-  background-color: #34294f;
+  background-color: #708d8119;
 }
 
 .socialTitle {
@@ -30,11 +29,11 @@
 
 .contact:hover .actionImg {
   transform: translate(0, -0.25rem);
-  fill: #e61976;
+  fill: #f4d58d;
 }
 
 .actionImg {
-  fill: #988db3;
+  fill: #faf0e6;
   width: 1.5rem;
   transition: 100ms ease-in;
 }
@@ -48,5 +47,5 @@
 }
 
 .bright {
-  color: #ded1ff;
+  color: #faf0e6;
 }

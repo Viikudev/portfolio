@@ -1,9 +1,9 @@
 .tag {
-  border: 0.125rem solid #e61976;
+  border: 0.125rem solid #f9db6d;
   font-size: 0.75rem;
   font-weight: bold;
   padding-inline: 0.5rem;
   width: fit-content;
   border-radius: 10rem;
-  color: #e61976;
+  color: #f9db6d;
 }
