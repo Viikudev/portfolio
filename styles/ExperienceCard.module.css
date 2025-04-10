@@ -1,6 +1,5 @@
 .experienceCard {
-  margin-left: 2.5rem;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding-inline: 1rem;
   display: flex;
   gap: 1rem;
 }
@@ -34,28 +33,14 @@
   margin: 0;
 }
 
-@media screen and (width <= 1200px) and (width > 800px) {
-  .experienceCard {
-    padding-inline: 0;
-    margin-left: 0;
-  }
-}
-
-@media screen and (width <= 800px) {
-  .experienceCard {
-    padding-inline: 0;
-    margin-left: 0;
-  }
-}
-
-@media screen and (width <= 720px) {
+@media screen and (width <= 1201px) {
   .tags {
     flex-wrap: wrap;
   }
 
   .experienceCard {
     width: 100%;
-    padding-inline: 0;
+    padding-inline: 1rem;
     margin-left: 0;
     flex-direction: column;
   }

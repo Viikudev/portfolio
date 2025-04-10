@@ -33,45 +33,105 @@ export default function Home() {
 
   return (
     <>
-      <div className={[styles.languageContainer, styles.bright].join(" ")}>
-        {language === "es" ? (
-          <Image src={imgSpain} alt='Spain Flag' width={35} height={35} />
-        ) : (
-          <Image
-            src={imgUnitedStates}
-            alt='United States Flag'
-            width={35}
-            height={35}
-          />
-        )}
-        <div className={styles.languageOptions}>
-          <input
-            type='radio'
-            name='language'
-            value='en'
-            id='en'
-            onChange={handleLanguageChange}
-            checked={language === "en"}
-          />
-          <label className={styles.englishOption} htmlFor='en'>
-            English
-          </label>
-          <input
-            type='radio'
-            name='language'
-            value='es'
-            id='es'
-            onChange={handleLanguageChange}
-            checked={language === "es"}
-          />
-          <label className={styles.spanishOption} htmlFor='es'>
-            Español
-          </label>
+      <header className={styles.header}>
+        <div className={styles.socials}>
+          <a href='https://github.com/Viikudev' target='_blank'>
+            <div className={styles.githubContainer}>
+              <Image
+                className={styles.github}
+                src={imgGithubUrl}
+                width={35}
+                height={35}
+                alt='Link to github'
+              />
+            </div>
+          </a>
+          <a href='https://www.linkedin.com/in/vikudev/' target='_blank'>
+            <div className={styles.linkedinContainer}>
+              <Image
+                className={styles.linkedin}
+                src={imgLinkedinUrl}
+                width={35}
+                height={35}
+                alt='Link to linkedin'
+              />
+            </div>
+          </a>
         </div>
-      </div>
+        <nav>
+          <ul className={styles.sectionList}>
+            <li>
+              <a className={styles.link} href='#about'>
+                {translations[language].nav.about}
+              </a>
+            </li>
+            <li>
+              <a className={styles.link} href='#projects'>
+                {translations[language].nav.projects}
+              </a>
+            </li>
+            <li>
+              <a className={styles.link} href='#experience'>
+                {translations[language].nav.experience}
+              </a>
+            </li>
+            <li>
+              <a className={styles.link} href='#skills'>
+                {translations[language].nav.skills}
+              </a>
+            </li>
+            <li>
+              <a className={styles.link} href='#education'>
+                {translations[language].nav.education}
+              </a>
+            </li>
+            <li>
+              <a className={styles.link} href='#contact'>
+                {translations[language].nav.contact}
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div className={[styles.languageContainer, styles.bright].join(" ")}>
+          {language === "es" ? (
+            <Image src={imgSpain} alt='Spain Flag' width={35} height={35} />
+          ) : (
+            <Image
+              src={imgUnitedStates}
+              alt='United States Flag'
+              width={35}
+              height={35}
+            />
+          )}
+
+          <div className={styles.languageOptions}>
+            <input
+              type='radio'
+              name='language'
+              value='en'
+              id='en'
+              onChange={handleLanguageChange}
+              checked={language === "en"}
+            />
+            <label className={styles.englishOption} htmlFor='en'>
+              English
+            </label>
+            <input
+              type='radio'
+              name='language'
+              value='es'
+              id='es'
+              onChange={handleLanguageChange}
+              checked={language === "es"}
+            />
+            <label className={styles.spanishOption} htmlFor='es'>
+              Español
+            </label>
+          </div>
+        </div>
+      </header>
       <main className={styles.main}>
         <section className={styles.left}>
-          {/* HERO DESKTOP */}
           <div className={styles.hero}>
             <Image
               priority
@@ -81,138 +141,15 @@ export default function Home() {
               height={869}
               alt='Picture of the author'
             />
-            <div className={styles.socials}>
-              <a href='https://github.com/victoresamuel' target='_blank'>
-                <div className={styles.githubContainer}>
-                  <Image
-                    className={styles.github}
-                    src={imgGithubUrl}
-                    width={40}
-                    height={40}
-                    alt='Link to github'
-                  />
-                </div>
-              </a>
-              <a
-                href='https://www.linkedin.com/in/victoresamuel/'
-                target='_blank'
-              >
-                <div className={styles.linkedinContainer}>
-                  <Image
-                    className={styles.linkedin}
-                    src={imgLinkedinUrl}
-                    width={40}
-                    height={40}
-                    alt='Link to linkedin'
-                  />
-                </div>
-              </a>
-            </div>
           </div>
           <div className={styles.info}>
-            <h1 className={styles.author}>Victor Samuel</h1>
-            <h3 className={styles.position}>{translations[language].role}</h3>
-            {language === "es" ? (
-              <p className={styles.introduction}>
-                Hola! Soy Victor, un desarrollador frontend apasionado que crea
-                interfaces de usuario hermosas interactivas para la comodidad de
-                los clientes.
-              </p>
-            ) : (
-              <p className={styles.introduction}>
-                Hello there! {`I'm`} Victor, a passionate frontend developer who
-                creates beautiful and interactive user interfaces for the
-                comfort of the clients.
-              </p>
-            )}
-          </div>
-
-          <nav>
-            <ul className={styles.sectionList}>
-              <li>
-                <a className={styles.link} href='#about'>
-                  {translations[language].nav.about}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#projects'>
-                  {translations[language].nav.projects}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#experience'>
-                  {translations[language].nav.experience}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#skills'>
-                  {translations[language].nav.skills}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#education'>
-                  {translations[language].nav.education}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#contact'>
-                  {translations[language].nav.contact}
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          {/* HERO TABLET */}
-          <nav className={styles.navList}>
-            <ul className={styles.sectionListTablet}>
-              <li>
-                <a className={styles.link} href='#about'>
-                  {translations[language].nav.about}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#projects'>
-                  {translations[language].nav.projects}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#experience'>
-                  {translations[language].nav.experience}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#skills'>
-                  {translations[language].nav.skills}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#education'>
-                  {translations[language].nav.education}
-                </a>
-              </li>
-              <li>
-                <a className={styles.link} href='#contact'>
-                  {translations[language].nav.contact}
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className={styles.heroTablet}>
-            <Image
-              priority
-              className={styles.profile}
-              src='/profile.jpg'
-              width={808}
-              height={869}
-              alt='Picture of the author'
-            />
-            <div className={styles.infoTablet}>
+            <div className={styles.viku}>
               <h1 className={styles.author}>Victor Samuel</h1>
-              <h3 className={styles.position}>{translations[language].role}</h3>
+              <h2 className={styles.position}>{translations[language].role}</h2>
               {language === "es" ? (
                 <p className={styles.introduction}>
                   Hola! Soy Victor, un desarrollador frontend apasionado que
-                  crea interfaces de usuario hermosas e interactivas para la
+                  crea interfaces de usuario hermosas interactivas para la
                   comodidad de los clientes.
                 </p>
               ) : (
@@ -224,62 +161,6 @@ export default function Home() {
               )}
             </div>
           </div>
-          <div className={styles.socialsTablet}>
-            <a href='https://github.com/victoresamuel' target='_blank'>
-              <div className={styles.githubContainer}>
-                <Image
-                  className={styles.github}
-                  src={imgGithubUrl}
-                  width={40}
-                  height={40}
-                  alt='Link to github'
-                />
-              </div>
-            </a>
-            <a
-              href='https://www.linkedin.com/in/victoresamuel/'
-              target='_blank'
-            >
-              <div className={styles.linkedinContainer}>
-                <Image
-                  className={styles.linkedin}
-                  src={imgLinkedinUrl}
-                  width={40}
-                  height={40}
-                  alt='Link to linkedin'
-                />
-              </div>
-            </a>
-          </div>
-
-          <footer className={styles.footer}>
-            {language === "es" ? (
-              <p className={styles.details}>
-                Diseñado por mí con <span className={styles.bright}>Miro</span>,
-                utilice el framework{" "}
-                <span className={styles.bright}>Next.js</span> en el desarrollo,
-                aplique estilos usando{" "}
-                <span className={styles.bright}>CSS Modules</span> y lo
-                desplegue en <span className={styles.bright}>Vercel</span>. Tomé
-                inspiración del portafolio de{" "}
-                <span className={styles.brittany}>{`Brittany
-          Chiang`}</span>{" "}
-                portfolio.
-              </p>
-            ) : (
-              <p className={styles.details}>
-                Designed by me with <span className={styles.bright}>Miro</span>,
-                used <span className={styles.bright}>Next.js</span> framework in
-                the development, styled using{" "}
-                <span className={styles.bright}>CSS Modules</span> and deployed
-                in <span className={styles.bright}>Vercel</span>. Took
-                inspiration from{" "}
-                <span className={styles.brittany}>{`Brittany
-          Chiang's `}</span>{" "}
-                portfolio.
-              </p>
-            )}
-          </footer>
         </section>
         <section className={styles.right}>
           <Section title={translations[language].projects.title} id='projects'>
@@ -297,7 +178,7 @@ export default function Home() {
                     .projectDescription
                 }
                 tags={["HTML", "CSS", "Javascript", "Vite"]}
-                url='https://victoresamuel.github.io/Guess-the-word-game/'
+                url='https://viikudev.github.io/Guess-the-word-game/'
               />
               <ProjectCard
                 project='coffee.png'
@@ -312,7 +193,7 @@ export default function Home() {
                     .projectDescription
                 }
                 tags={["HTML", "CSS", "Typescript", "React", "Vite"]}
-                url='https://victoresamuel.github.io/Coffee-Listing/'
+                url='https://viikudev.github.io/Coffee-Listing/'
               />
             </ul>
           </Section>
@@ -379,32 +260,32 @@ export default function Home() {
                 <Contact
                   contact='linkedin'
                   name='Linkedin'
-                  user='victoresamuel'
+                  user='vikudev'
                   action='redirect'
                   url='https://www.linkedin.com/in/victoresamuel/'
                 />
                 <Contact
                   contact='github'
                   name='Github'
-                  user='victoresamuel'
+                  user='Viikudev'
                   action='redirect'
                   url='https://github.com/victoresamuel'
                 />
-              </div>
-              <div className={styles.email}>
-                <Contact
-                  contact='email'
-                  name='victoress18@gmail.com'
-                  action='copy'
-                  onClick={handleClick}
-                />
-                <p className={styles.copied}>Copied to clipboard!</p>
+                <div className={styles.email}>
+                  <Contact
+                    contact='email'
+                    name='victoress18@gmail.com'
+                    action='copy'
+                    onClick={handleClick}
+                  />
+                  <p className={styles.copied}>Copied to clipboard!</p>
+                </div>
               </div>
             </ul>
           </Section>
         </section>
       </main>
-      <footer className={styles.footerTablet}>
+      <footer className={styles.footer}>
         {language === "es" ? (
           <p className={styles.details}>
             Diseñado por mí con <span className={styles.bright}>Miro</span>,
