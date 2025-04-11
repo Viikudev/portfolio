@@ -93,17 +93,6 @@ export default function Home() {
           </ul>
         </nav>
         <div className={[styles.languageContainer, styles.bright].join(" ")}>
-          {language === "es" ? (
-            <Image src={imgSpain} alt='Spain Flag' width={35} height={35} />
-          ) : (
-            <Image
-              src={imgUnitedStates}
-              alt='United States Flag'
-              width={35}
-              height={35}
-            />
-          )}
-
           <div className={styles.languageOptions}>
             <input
               type='radio'
@@ -114,7 +103,13 @@ export default function Home() {
               checked={language === "en"}
             />
             <label className={styles.englishOption} htmlFor='en'>
-              English
+              <Image
+                src={imgUnitedStates}
+                alt='United States Flag'
+                width={25}
+                height={25}
+              />
+              EN
             </label>
             <input
               type='radio'
@@ -125,7 +120,8 @@ export default function Home() {
               checked={language === "es"}
             />
             <label className={styles.spanishOption} htmlFor='es'>
-              Español
+              <Image src={imgSpain} alt='Spain Flag' width={25} height={25} />
+              ES
             </label>
           </div>
         </div>
