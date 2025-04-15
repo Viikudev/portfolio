@@ -6,7 +6,7 @@
   color: #f9db6d;
 }
 
-@media screen and (width <= 1201px) {
+@media screen and (width <= 1525px) {
   .title {
     padding-inline: 1rem;
   }

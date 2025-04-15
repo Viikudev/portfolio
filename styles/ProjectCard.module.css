@@ -62,7 +62,7 @@
   list-style: none;
 }
 
-@media screen and (width <= 1201px) {
+@media screen and (width <= 1525px) {
   .tags {
     flex-wrap: wrap;
   }

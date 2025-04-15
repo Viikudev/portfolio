@@ -8,7 +8,7 @@ p {
 
 ::selection {
   color: #ded1ff;
-  background: blue;
+  background: cornflowerblue;
 }
 
 button {
@@ -26,15 +26,20 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
+li {
+  list-style: none;
+}
+
 html,
 body {
+  width: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  scrollbar-color: #f4d58d #001427;
+  scrollbar-color: #f4d58d rgba(0, 14, 27, 0.8);
   scrollbar-width: auto;
   line-height: 2;
   color: #d3d3d3;
   background-color: #001427;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 }

@@ -16,7 +16,7 @@
   margin: 0;
 }
 
-@media screen and (width <= 1201px) {
+@media screen and (width <= 1525px) {
   .educationCard {
     padding-inline: 1rem;
   }
