@@ -37,37 +37,6 @@ export default function Home() {
     <>
       <main className={styles.main}>
         <div className={[styles.languageContainer, styles.bright].join(" ")}>
-          <div className={styles.languageOptions}>
-            <input
-              type='radio'
-              name='language'
-              value='en'
-              id='en'
-              onChange={handleLanguageChange}
-              checked={language === "en"}
-            />
-            <label className={styles.englishOption} htmlFor='en'>
-              <Image
-                src={imgUnitedStates}
-                alt='United States Flag'
-                width={25}
-                height={25}
-              />
-              EN
-            </label>
-            <input
-              type='radio'
-              name='language'
-              value='es'
-              id='es'
-              onChange={handleLanguageChange}
-              checked={language === "es"}
-            />
-            <label className={styles.spanishOption} htmlFor='es'>
-              <Image src={imgSpain} alt='Spain Flag' width={25} height={25} />
-              ES
-            </label>
-          </div>
           <div className={styles.hamburgerContainer}>
             <Hamburger
               size={30}
@@ -116,6 +85,37 @@ export default function Home() {
               </a>
             </li>
           </ul>
+          <div className={styles.languageOptions}>
+            <input
+              type='radio'
+              name='language'
+              value='en'
+              id='en'
+              onChange={handleLanguageChange}
+              checked={language === "en"}
+            />
+            <label className={styles.englishOption} htmlFor='en'>
+              <Image
+                src={imgUnitedStates}
+                alt='United States Flag'
+                width={25}
+                height={25}
+              />
+              EN
+            </label>
+            <input
+              type='radio'
+              name='language'
+              value='es'
+              id='es'
+              onChange={handleLanguageChange}
+              checked={language === "es"}
+            />
+            <label className={styles.spanishOption} htmlFor='es'>
+              <Image src={imgSpain} alt='Spain Flag' width={25} height={25} />
+              ES
+            </label>
+          </div>
         </div>
         <section className={styles.content}>
           <section className={styles.left}>

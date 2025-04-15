@@ -354,6 +354,10 @@
     display: none;
   }
 
+  .introduction {
+    padding: 1rem;
+  }
+
   .hamburgerContainer {
     right: 1rem;
     z-index: 1000;
@@ -370,11 +374,11 @@
     padding: 4rem 4rem 2rem 2rem;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
   }
 
   .mobileMenuClosed {
-    transform: translate(100%, 0);
+    transform: translate(-100%, 0);
     transition: ease-in 0.2s;
   }
 
