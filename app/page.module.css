@@ -355,7 +355,6 @@
   }
 
   .hamburgerContainer {
-    position: fixed;
     right: 1rem;
     z-index: 1000;
     display: inline-block;
@@ -369,7 +368,7 @@
     background-color: rgba(0, 14, 27, 0.8);
     backdrop-filter: blur(0.5rem);
     padding: 4rem 4rem 2rem 2rem;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
   }
