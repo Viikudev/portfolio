@@ -257,14 +257,14 @@ export default function Home() {
                     name='Linkedin'
                     user='vikudev'
                     action='redirect'
-                    url='https://www.linkedin.com/in/victoresamuel/'
+                    url='https://www.linkedin.com/in/vikudev/'
                   />
                   <Contact
                     contact='github'
                     name='Github'
                     user='Viikudev'
                     action='redirect'
-                    url='https://github.com/victoresamuel'
+                    url='https://github.com/Viikudev'
                   />
                   <div className={styles.email}>
                     <Contact
