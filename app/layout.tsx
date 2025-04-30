@@ -30,6 +30,7 @@ export default function RootLayout({
       <meta property='og:image' content='public/portfolio.png' />
       <meta property='og:url' content='https://www.viku.dev/' />
       <meta property='og:type' content='website' />
+      <meta name='twitter:image' content='public/portfolio.png' />
       <body className={rubik.className}>{children}</body>
     </html>
   )
