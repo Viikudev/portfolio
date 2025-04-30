@@ -27,7 +27,7 @@ export default function RootLayout({
         property='og:description'
         content='This is the personal website of Viku'
       />
-      <meta property='og:image' content='/portfolio.png' />
+      <meta property='og:image' content='@/public/portfolio.png' />
       <meta property='og:url' content='https://www.viku.dev/' />
       <meta property='og:type' content='website' />
       <body className={rubik.className}>{children}</body>
