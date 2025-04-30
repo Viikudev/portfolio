@@ -1,3 +1,4 @@
+import Head from "next/head"
 import type { Metadata } from "next"
 import { Rubik } from "next/font/google"
 import "./globals.css"
@@ -19,6 +20,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <title>{`Viku's Portfolio`}</title>
+      <meta name='description' content='This is the personal website of Viku' />
+      <meta property='og:title' content="Viku's Portfolio" />
+      <meta
+        property='og:description'
+        content='This is the personal website of Viku'
+      />
+      <meta property='og:image' content='public/portfolio.png' />
+      <meta property='og:url' content='https://www.viku.dev/' />
+      <meta property='og:type' content='website' />
       <body className={rubik.className}>{children}</body>
     </html>
   )
