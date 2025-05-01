@@ -22,15 +22,26 @@ export default function RootLayout({
     <html lang='en'>
       <title>{`Viku's Portfolio`}</title>
       <meta name='description' content='This is the personal website of Viku' />
+
+      <meta property='og:url' content='https://www.viku.dev/' />
+      <meta property='og:type' content='website' />
       <meta property='og:title' content="Viku's Portfolio" />
       <meta
         property='og:description'
         content='This is the personal website of Viku'
       />
-      <meta property='og:image' content='public/portfolio.png' />
-      <meta property='og:url' content='https://www.viku.dev/' />
-      <meta property='og:type' content='website' />
-      <meta name='twitter:image' content='public/portfolio.png' />
+      <meta property='og:image' content='@/public/portfolio.png' />
+
+      <meta name='twitter:card' content='summary_large_image' />
+      <meta property='twitter:domain' content='viku.dev' />
+      <meta property='twitter:url' content='https://www.viku.dev/' />
+      <meta name='twitter:title' content="Viku's Portfolio" />
+      <meta
+        name='twitter:description'
+        content='This is the personal website of Viku'
+      />
+      <meta name='twitter:image' content='@/public/portfolio.png' />
+
       <body className={rubik.className}>{children}</body>
     </html>
   )
