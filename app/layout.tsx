@@ -30,7 +30,10 @@ export default function RootLayout({
         property='og:description'
         content='This is the personal website of Viku'
       />
-      <meta property='og:image' content='@/public/image-preview.png' />
+      <meta
+        property='og:image'
+        content='https://www.viku.dev/image-preview.png'
+      />
 
       <meta name='twitter:card' content='summary_large_image' />
       <meta property='twitter:domain' content='viku.dev' />
@@ -40,7 +43,10 @@ export default function RootLayout({
         name='twitter:description'
         content='This is the personal website of Viku'
       />
-      <meta name='twitter:image' content='@/public/image-preview.png' />
+      <meta
+        name='twitter:image'
+        content='https://www.viku.dev/image-preview.png'
+      />
 
       <body className={rubik.className}>{children}</body>
     </html>
