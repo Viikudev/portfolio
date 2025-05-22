@@ -30,6 +30,12 @@ export const translations = {
         projectDescription:
           "A project created using HTML, CSS, Typescript and ReactJS. It used an API to get the data of coffee items, and built a reusable component that shows every type of coffee in the list with their own properties. The project uses the state management to show the entire list of coffees or only the coffees that are available.",
       },
+      problend: {
+        projectTitle: "Problend",
+        projectDate: "May 2025 - May 2025",
+        projectDescription:
+          "A project built for the Hackathon sponsored by Clerk and led by Midudev. The application allows users to create cards containing a problem from their daily or professional life. Other users can then respond to these problems, and the user who created the card determines if the answer solved the problem or not. Clerk was used for user management and protected system routes as a requirement of the Hackathon.",
+      },
     },
     experience: {
       title: "Experience",
@@ -88,6 +94,12 @@ export const translations = {
         projectDescription:
           "Un proyecto creado con HTML, CSS, Typescript y ReactJS. Utilizó una API para obtener los datos de los artículos de café y construyó un componente reutilizable que muestra cada tipo de café en la lista con sus propias propiedades. El proyecto utiliza la gestión de estado para mostrar la lista completa de cafés o solo los cafés que están disponibles.",
       },
+      problend: {
+        projectTitle: "Problend",
+        projectDate: "Mayo 2025 - Mayo 2025",
+        projectDescription:
+          "Un proyecto construido para la Hackaton auspiciada por Clerk y llevada por Midudev, la aplicacion permite a los usuarios crear tarjetas que contienen una problematica de su vida cotidiana o profesional, mientras que otros usuarios tienen la posibilidad de responderla y que el usuario que creo la tarjeta determine si la respuesta resolvio el problema o no. Se utilizo Clerk para el manejo de los usarios y rutas protegidas del sistema como requerimiento de la Hackaton",
+      },
     },
     experience: {
       title: "Experiencia",
@@ -116,4 +128,4 @@ export const translations = {
     footer:
       "Diseñado por mí con Miro, utilicé el framework Next.js en el desarrollo, estilizado con CSS Modules y desplegado en Vercel. Me inspiré en el portafolio de Brittany Chiang.",
   },
-}
+};

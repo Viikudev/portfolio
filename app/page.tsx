@@ -1,37 +1,37 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import styles from "@/app/page.module.css"
-import imgGithubUrl from "@/public/github.svg"
-import imgLinkedinUrl from "@/public/linkedin.svg"
-import imgSpain from "@/public/spain.png"
-import imgUnitedStates from "@/public/united-states.png"
-import Section from "@/components/Section"
-import ProjectCard from "@/components/ProjectCard"
-import Skill from "@/components/Skill"
-import Contact from "@/components/Contact"
-import ExperienceCard from "@/components/ExperienceCard"
-import EducationCard from "@/components/EducationCard"
-import { Rotate as Hamburger } from "hamburger-react"
+import Image from "next/image";
+import styles from "@/app/page.module.css";
+import imgGithubUrl from "@/public/github.svg";
+import imgLinkedinUrl from "@/public/linkedin.svg";
+import imgSpain from "@/public/spain.png";
+import imgUnitedStates from "@/public/united-states.png";
+import Section from "@/components/Section";
+import ProjectCard from "@/components/ProjectCard";
+import Skill from "@/components/Skill";
+import Contact from "@/components/Contact";
+import ExperienceCard from "@/components/ExperienceCard";
+import EducationCard from "@/components/EducationCard";
+import { Rotate as Hamburger } from "hamburger-react";
 
-import { translations } from "@/lib/translations"
-import { useState } from "react"
+import { translations } from "@/lib/translations";
+import { useState } from "react";
 
-type LocaleProps = "en" | "es"
+type LocaleProps = "en" | "es";
 
 export default function Home() {
-  const [language, setLanguage] = useState<LocaleProps>("en")
-  const [isOpen, setOpen] = useState(false)
+  const [language, setLanguage] = useState<LocaleProps>("en");
+  const [isOpen, setOpen] = useState(false);
 
   const handleLanguageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newLanguage = event.target.value as LocaleProps
-    setLanguage(newLanguage)
-  }
+    const newLanguage = event.target.value as LocaleProps;
+    setLanguage(newLanguage);
+  };
 
   const handleClick = () => {
-    const email = "victoress18@gmail.com"
-    navigator.clipboard.writeText(email)
-  }
+    const email = "victoress18@gmail.com";
+    navigator.clipboard.writeText(email);
+  };
 
   return (
     <>
@@ -42,11 +42,11 @@ export default function Home() {
               size={30}
               toggled={isOpen}
               toggle={setOpen}
-              direction='left'
+              direction="left"
               duration={0.2}
-              distance='lg'
-              color='white'
-              easing='ease-in'
+              distance="lg"
+              color="white"
+              easing="ease-in"
             />
           </div>
           <ul
@@ -55,64 +55,64 @@ export default function Home() {
             }
           >
             <li>
-              <a className={styles.link} href='#projects'>
+              <a className={styles.link} href="#projects">
                 {translations[language].nav.projects}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#experience'>
+              <a className={styles.link} href="#experience">
                 {translations[language].nav.experience}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#skills'>
+              <a className={styles.link} href="#skills">
                 {translations[language].nav.skills}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#education'>
+              <a className={styles.link} href="#education">
                 {translations[language].nav.education}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#contact'>
+              <a className={styles.link} href="#contact">
                 {translations[language].nav.contact}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#about'>
+              <a className={styles.link} href="#about">
                 {translations[language].nav.about}
               </a>
             </li>
           </ul>
           <div className={styles.languageOptions}>
             <input
-              type='radio'
-              name='language'
-              value='en'
-              id='en'
+              type="radio"
+              name="language"
+              value="en"
+              id="en"
               onChange={handleLanguageChange}
               checked={language === "en"}
             />
-            <label className={styles.englishOption} htmlFor='en'>
+            <label className={styles.englishOption} htmlFor="en">
               <Image
                 src={imgUnitedStates}
-                alt='United States Flag'
+                alt="United States Flag"
                 width={25}
                 height={25}
               />
               EN
             </label>
             <input
-              type='radio'
-              name='language'
-              value='es'
-              id='es'
+              type="radio"
+              name="language"
+              value="es"
+              id="es"
               onChange={handleLanguageChange}
               checked={language === "es"}
             />
-            <label className={styles.spanishOption} htmlFor='es'>
-              <Image src={imgSpain} alt='Spain Flag' width={25} height={25} />
+            <label className={styles.spanishOption} htmlFor="es">
+              <Image src={imgSpain} alt="Spain Flag" width={25} height={25} />
               ES
             </label>
           </div>
@@ -123,10 +123,10 @@ export default function Home() {
               <Image
                 priority
                 className={styles.profile}
-                src='/profile.jpg'
+                src="/profile.jpg"
                 width={808}
                 height={869}
-                alt='Picture of the author'
+                alt="Picture of the author"
               />
             </div>
             <div className={styles.info}>
@@ -154,11 +154,35 @@ export default function Home() {
           <section className={styles.right}>
             <Section
               title={translations[language].projects.title}
-              id='projects'
+              id="projects"
             >
               <ul className={styles.projectList}>
                 <ProjectCard
-                  project='scramblle.png'
+                  project="problend-thumbnail.png"
+                  title={translations[language].projects.problend.projectTitle}
+                  duration={
+                    translations[language].projects.problend.projectDate
+                  }
+                  description={
+                    translations[language].projects.problend.projectDescription
+                  }
+                  tags={[
+                    "HTML",
+                    "CSS",
+                    "Typescript",
+                    "React",
+                    "Next.js",
+                    "Clerk",
+                    "Supabase",
+                    "Tailwind",
+                    "Shadcn",
+                    "Prisma",
+                    "Zustand",
+                  ]}
+                  url="https://github.com/Viikudev/problend"
+                />
+                <ProjectCard
+                  project="scramblle.png"
                   title={
                     translations[language].projects.guessTheWordGame
                       .projectTitle
@@ -171,10 +195,10 @@ export default function Home() {
                       .projectDescription
                   }
                   tags={["HTML", "CSS", "Javascript", "Vite"]}
-                  url='https://viikudev.github.io/Guess-the-word-game/'
+                  url="https://problend.vercel.app/"
                 />
                 <ProjectCard
-                  project='coffee.png'
+                  project="coffee.png"
                   title={
                     translations[language].projects.coffeeListing.projectTitle
                   }
@@ -186,17 +210,17 @@ export default function Home() {
                       .projectDescription
                   }
                   tags={["HTML", "CSS", "Typescript", "React", "Vite"]}
-                  url='https://viikudev.github.io/Coffee-Listing/'
+                  url="https://viikudev.github.io/Coffee-Listing/"
                 />
               </ul>
             </Section>
             <Section
               title={translations[language].experience.title}
-              id='experience'
+              id="experience"
             >
               <ul className={styles.experienceList}>
                 <ExperienceCard
-                  experience='ferrominera.jpg'
+                  experience="ferrominera.jpg"
                   title={
                     translations[language].experience.ferrominera
                       .ferromineraRole
@@ -222,18 +246,18 @@ export default function Home() {
               </ul>
             </Section>
 
-            <Section title={translations[language].skills.title} id='skills'>
+            <Section title={translations[language].skills.title} id="skills">
               <ul className={styles.skillList}>
-                <Skill skill='html' name='HTML' />
-                <Skill skill='css' name='CSS' />
-                <Skill skill='javascript' name='Javascript' />
-                <Skill skill='typescript' name='Typescript' />
-                <Skill skill='react' name='React.js' />
+                <Skill skill="html" name="HTML" />
+                <Skill skill="css" name="CSS" />
+                <Skill skill="javascript" name="Javascript" />
+                <Skill skill="typescript" name="Typescript" />
+                <Skill skill="react" name="React.js" />
               </ul>
             </Section>
             <Section
               title={translations[language].education.title}
-              id='education'
+              id="education"
             >
               <EducationCard
                 university={translations[language].education.university}
@@ -241,36 +265,36 @@ export default function Home() {
                 duration={translations[language].education.date}
               />
             </Section>
-            <Section title={translations[language].about.title} id='about'>
+            <Section title={translations[language].about.title} id="about">
               <p className={styles.description}>
                 {translations[language].about.content}
               </p>
             </Section>
             <Section
               title={translations[language].callToAction.title}
-              id='contact'
+              id="contact"
             >
               <ul className={styles.contactList}>
                 <div className={styles.socialsContainer}>
                   <Contact
-                    contact='linkedin'
-                    name='Linkedin'
-                    user='vikudev'
-                    action='redirect'
-                    url='https://www.linkedin.com/in/vikudev/'
+                    contact="linkedin"
+                    name="Linkedin"
+                    user="vikudev"
+                    action="redirect"
+                    url="https://www.linkedin.com/in/vikudev/"
                   />
                   <Contact
-                    contact='github'
-                    name='Github'
-                    user='Viikudev'
-                    action='redirect'
-                    url='https://github.com/Viikudev'
+                    contact="github"
+                    name="Github"
+                    user="Viikudev"
+                    action="redirect"
+                    url="https://github.com/Viikudev"
                   />
                   <div className={styles.email}>
                     <Contact
-                      contact='email'
-                      name='victoress18@gmail.com'
-                      action='copy'
+                      contact="email"
+                      name="victoress18@gmail.com"
+                      action="copy"
                       onClick={handleClick}
                     />
                     <p className={styles.copied}>Copied to clipboard!</p>
@@ -308,25 +332,25 @@ export default function Home() {
       </main>
       <header className={styles.header}>
         <div className={styles.socials}>
-          <a href='https://github.com/Viikudev' target='_blank'>
+          <a href="https://github.com/Viikudev" target="_blank">
             <div className={styles.githubContainer}>
               <Image
                 className={styles.github}
                 src={imgGithubUrl}
                 width={35}
                 height={35}
-                alt='Link to github'
+                alt="Link to github"
               />
             </div>
           </a>
-          <a href='https://www.linkedin.com/in/vikudev/' target='_blank'>
+          <a href="https://www.linkedin.com/in/vikudev/" target="_blank">
             <div className={styles.linkedinContainer}>
               <Image
                 className={styles.linkedin}
                 src={imgLinkedinUrl}
                 width={35}
                 height={35}
-                alt='Link to linkedin'
+                alt="Link to linkedin"
               />
             </div>
           </a>
@@ -334,32 +358,32 @@ export default function Home() {
         <nav>
           <ul className={styles.sectionList}>
             <li>
-              <a className={styles.link} href='#projects'>
+              <a className={styles.link} href="#projects">
                 {translations[language].nav.projects}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#experience'>
+              <a className={styles.link} href="#experience">
                 {translations[language].nav.experience}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#skills'>
+              <a className={styles.link} href="#skills">
                 {translations[language].nav.skills}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#education'>
+              <a className={styles.link} href="#education">
                 {translations[language].nav.education}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#contact'>
+              <a className={styles.link} href="#contact">
                 {translations[language].nav.contact}
               </a>
             </li>
             <li>
-              <a className={styles.link} href='#about'>
+              <a className={styles.link} href="#about">
                 {translations[language].nav.about}
               </a>
             </li>
@@ -367,5 +391,5 @@ export default function Home() {
         </nav>
       </header>
     </>
-  )
+  );
 }
