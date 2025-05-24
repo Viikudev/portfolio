@@ -179,7 +179,7 @@ export default function Home() {
                     "Prisma",
                     "Zustand",
                   ]}
-                  url="https://github.com/Viikudev/problend"
+                  url="https://problend.vercel.app/"
                 />
                 <ProjectCard
                   project="scramblle.png"
@@ -195,7 +195,7 @@ export default function Home() {
                       .projectDescription
                   }
                   tags={["HTML", "CSS", "Javascript", "Vite"]}
-                  url="https://problend.vercel.app/"
+                  url="https://viikudev.github.io/Guess-the-word-game/"
                 />
                 <ProjectCard
                   project="coffee.png"
